@@ -23,16 +23,24 @@ class CountriesVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
+        setTableView()
+        fetchData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
         navigationItem.title = "Countries"
         navigationController?.navigationBar.prefersLargeTitles = true
-        
+    }
+    
+    func setTableView() {
+
         tableViewContainer.addSubview(tableView)
         view.addSubview(tableViewContainer)
         
         NSLayoutConstraint.activate([
             tableViewContainer.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 24),
             tableViewContainer.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -24),
-            tableViewContainer.topAnchor.constraint(equalTo: view.topAnchor),
+            tableViewContainer.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
             tableViewContainer.bottomAnchor.constraint(equalTo: view.bottomAnchor)
         ])
         
@@ -42,8 +50,6 @@ class CountriesVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
             tableView.topAnchor.constraint(equalTo: tableViewContainer.topAnchor),
             tableView.bottomAnchor.constraint(equalTo: tableViewContainer.bottomAnchor)
         ])
-        
-        fetchData()
     }
     
     func fetchData() {
@@ -76,7 +82,8 @@ class CountriesVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
         cell.chevronTapHandler = {
             let detailsVC = DetailsVC()
             detailsVC.country = country
-            self.navigationController?.pushViewController(detailsVC, animated: true)
+            self.navigationController?.navigationBar.prefersLargeTitles = false
+            self.navigationController?.pushViewController(detailsVC, animated: false)
         }
         
         return cell
@@ -93,7 +100,8 @@ class CountriesVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
         let detailsVC = DetailsVC()
         detailsVC.country = country
         
-        navigationController?.pushViewController(detailsVC, animated: true)
+        navigationController?.navigationBar.prefersLargeTitles = false
+        navigationController?.pushViewController(detailsVC, animated: false)
     }
     
 }
