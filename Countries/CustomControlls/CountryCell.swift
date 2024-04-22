@@ -16,7 +16,7 @@ class CountryCell: UITableViewCell {
     
     let nameLabel: UILabel = {
         let label = UILabel()
-        label.font = UIFont.systemFont(ofSize: 16, weight: .medium)
+        label.font = UIFont(name: "SFPro-Regular", size: 14)
         return label
     }()
     

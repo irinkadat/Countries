@@ -32,6 +32,18 @@ class CountriesVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
         navigationController?.navigationBar.prefersLargeTitles = true
     }
     
+    func configureNavTitle() {
+           if let customFont = UIFont(name: "SFPro-Bold", size: 24) {
+               let attrs = [
+                   NSAttributedString.Key.foregroundColor: UIColor.label,
+                   NSAttributedString.Key.font: customFont
+               ]
+               navigationController?.navigationBar.largeTitleTextAttributes = attrs
+
+           }
+
+       }
+    
     func setTableView() {
 
         tableViewContainer.addSubview(tableView)

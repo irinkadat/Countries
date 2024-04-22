@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C01DD842BD69B8E00BFC78D /* SF-Pro.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 8C01DD832BD69B8E00BFC78D /* SF-Pro.ttf */; };
 		8C0A02862BD50286002DB08A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0A02852BD50286002DB08A /* AppDelegate.swift */; };
 		8C0A02882BD50286002DB08A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0A02872BD50286002DB08A /* SceneDelegate.swift */; };
 		8C0A028A2BD50286002DB08A /* CountriesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0A02892BD50286002DB08A /* CountriesVC.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C01DD832BD69B8E00BFC78D /* SF-Pro.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro.ttf"; sourceTree = "<group>"; };
 		8C0A02822BD50286002DB08A /* Countries.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Countries.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C0A02852BD50286002DB08A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8C0A02872BD50286002DB08A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8C01DD822BD69A9E00BFC78D /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				8C01DD832BD69B8E00BFC78D /* SF-Pro.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
 		8C0A02792BD50286002DB08A = {
 			isa = PBXGroup;
 			children = (
@@ -95,6 +105,7 @@
 		8C0A029B2BD502CC002DB08A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				8C01DD822BD69A9E00BFC78D /* Font */,
 				8C0A028E2BD50288002DB08A /* Assets.xcassets */,
 				8C0A02902BD50288002DB08A /* LaunchScreen.storyboard */,
 				8C0A02932BD50288002DB08A /* Info.plist */,
@@ -186,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8C0A028F2BD50288002DB08A /* Assets.xcassets in Resources */,
+				8C01DD842BD69B8E00BFC78D /* SF-Pro.ttf in Resources */,
 				8C0A02922BD50288002DB08A /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

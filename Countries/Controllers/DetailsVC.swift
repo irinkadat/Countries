@@ -127,7 +127,7 @@ class DetailsVC: UIViewController {
         
         let aboutFlagTitleLabel = UILabel()
         aboutFlagTitleLabel.text = "About the Flag"
-        aboutFlagTitleLabel.font = UIFont.boldSystemFont(ofSize: 18)
+        aboutFlagTitleLabel.font = UIFont(name: "SFPro-Bold", size: 16)
         
         aboutFlagStackView.addArrangedSubview(aboutFlagTitleLabel)
         aboutFlagStackView.addArrangedSubview(flagDetailsLabel)
@@ -141,7 +141,7 @@ class DetailsVC: UIViewController {
         
         let basicInfoTitleLabel = UILabel()
         basicInfoTitleLabel.text = "Basic Information"
-        basicInfoTitleLabel.font = UIFont.boldSystemFont(ofSize: 18)
+        basicInfoTitleLabel.font = UIFont(name: "SFPro-Bold", size: 16)
         
         basicInfoStackView.addArrangedSubview(basicInfoTitleLabel)
         basicInfoStackView.addArrangedSubview(createInfoLabel(title: "Time Zone", value: timezoneLabel))
@@ -160,7 +160,7 @@ class DetailsVC: UIViewController {
         
         let usefulLinksTitleLabel = UILabel()
         usefulLinksTitleLabel.text = "Useful Links"
-        usefulLinksTitleLabel.font = UIFont.boldSystemFont(ofSize: 18)
+        usefulLinksTitleLabel.font = UIFont(name: "SFPro-Bold", size: 16)
         usefulLinksTitleLabel.translatesAutoresizingMaskIntoConstraints = false
         
         contentView.addSubview(usefulLinksTitleLabel)
@@ -236,9 +236,10 @@ class DetailsVC: UIViewController {
         
         let titleLabel = UILabel()
         titleLabel.text = title
-        titleLabel.font = UIFont.systemFont(ofSize: 16)
+        titleLabel.font = UIFont(name: "SFPro-Regular", size: 14)
         titleLabel.numberOfLines = 0
         value.numberOfLines = 0
+        value.font = UIFont(name: "SFPro-Regular", size: 14)
         stackView.addArrangedSubview(titleLabel)
         stackView.addArrangedSubview(value)
         
